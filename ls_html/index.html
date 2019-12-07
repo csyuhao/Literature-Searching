@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Literature Search Engine</title>
+    <link href="_/css/styles.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<main class="container bg-light">
+    <header class="">
+        <nav class="navbar bg-primary mb-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">LOGO</a>
+                </li>
+            </ul>
+            <div class="text-light col-sm-11">
+                <h1 class="mb-0" style="text-align:center;">Literature Search Engine</h1>
+            </div>
+        </nav>
+    </header>
+
+    <article class="container searchForm">
+        <form class="form-horizontal" action="" id="searchForm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 border-bottom border-info">
+                        <h2 class="mb-0 text-secondary" style="line-height: 36px;">Search UI</h2>
+                    </div>
+                    <label class="sr-only" for="searchType">Search Type</label>
+                    <select class="form-control col-sm-3" name="searchType" id="searchType">
+                        <option value="genSearch" selected="selected">General Search</option>
+                        <option value="advSearch">Advanced Search</option>
+                    </select>
+                </div>
+                <div class="container px-0" id="genSearch">
+                    <div class="row form-group">
+                        <div class="col-sm-9 pl-0">
+                            <label class="sr-only" for="genSearchInput"></label>
+                            <input type="text" class="form-control" name="genSearchInput"
+                                   id="genSearchInput" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn bg-white col-sm-3" id="genSearchSubmit">Search</button>
+                    </div>
+                </div><!-- #genSearch -->
+            </div>
+
+            <div class="container hidden" id="advSearch">
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchWithWords">With all the words:</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchWithWords"
+                           id="advSearchWithWords" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchWithPhrase">With the phrase:</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchWithPhrase"
+                           id="advSearchWithPhrase" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchCategory">Category</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchCategory"
+                           id="advSearchCategory" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchWithoutWords">Without the words:</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchWithoutWords"
+                           id="advSearchWithoutWords" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchID">ID</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchID"
+                           id="advSearchID" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-3" for="advSearchPublishedYear">Year published</label>
+                    <input type="text" class="form-control col-sm-9" name="advSearchPublishedYear"
+                           id="advSearchPublishedYear" placeholder="单行输入">
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-5">
+                        <button type="submit" class="btn bg-white float-right" name="advSearchRefresh"
+                                id="advSearchRefresh">Refresh
+                        </button>
+                    </div>
+                    <div class="col-sm-7">
+                        <button type="submit" class="btn bg-white float-right" name="advSearchSubmit"
+                                id="advSearchSubmit">Search
+                        </button>
+                    </div>
+                </div>
+            </div><!-- #advSearch -->
+        </form><!-- #searchForm -->
+    </article><!-- .searchForm -->
+
+    <section class="container searchResults">
+        <div class="row header my-3 mx-1">
+            <div class="col-4 col-md-3">Title</div>
+            <div class="col-4 col-md-2">Literature ID</div>
+            <div class="col-4 col-md-2">Category</div>
+            <div class="col-4 col-md-2">Report No.</div>
+            <div class="col-4 col-md-2">Author</div>
+            <div class="col-4 col-md-1">Detail</div>
+        </div>
+
+        <article class="container items">
+            <div class="row bg-white border-info">
+                <div class="col-4 col-md-3"><a href="">Title</a></div>
+                <div class="col-4 col-md-2">ID: 680100003309</div>
+                <div class="col-4 col-md-2">Category</div>
+                <div class="col-4 col-md-2">report #</div>
+                <div class="col-4 col-md-2">Author</div>
+                <div class="col-4 col-md-1"><a href="">see more</a></div>
+            </div>
+            <div class="row bg-white border-info">
+                <div class="col-4 col-md-3"><a href="">Title</a></div>
+                <div class="col-4 col-md-2">ID: 680100003309</div>
+                <div class="col-4 col-md-2">Category</div>
+                <div class="col-4 col-md-2">report #</div>
+                <div class="col-4 col-md-2">Author</div>
+                <div class="col-4 col-md-1"><a href="">see more</a></div>
+            </div>
+            <div class="row bg-white border-info">
+                <div class="col-4 col-md-3"><a href="">Title</a></div>
+                <div class="col-4 col-md-2">ID: 680100003309</div>
+                <div class="col-4 col-md-2">Category</div>
+                <div class="col-4 col-md-2">report #</div>
+                <div class="col-4 col-md-2">Author</div>
+                <div class="col-4 col-md-1"><a href="">see more</a></div>
+            </div>
+            <div class="row bg-white border-info">
+                <div class="col-4 col-md-3"><a href="">Title</a></div>
+                <div class="col-4 col-md-2">ID: 680100003309</div>
+                <div class="col-4 col-md-2">Category</div>
+                <div class="col-4 col-md-2">report #</div>
+                <div class="col-4 col-md-2">Author</div>
+                <div class="col-4 col-md-1"><a href="">see more</a></div>
+            </div>
+        </article><!-- .items -->
+
+        <div class="row controls justify-content-end p-2">
+            <div class="m-md-2">
+                <span style="line-height: 40px;">Total XXX pages</span>
+            </div>
+            <ul class="m-md-2 pagination">
+                <li class="page-item disabled"><a class="page-link" href="#">&lt;</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+            </ul>
+            <div class="m-md-2 form-group">
+                <label class="sr-only" for="itemsPerPage"></label>
+                <select class="form-control" name="itemsPerPage" id="itemsPerPage">
+                    <option value="10">10 items/page</option>
+                    <option value="20">20 items/page</option>
+                    <option value="50">50 items/page</option>
+                    <option value="100">100 items/page</option>
+                </select>
+            </div>
+        </div> <!-- .controls -->
+    </section><!-- .searchResults -->
+
+</main><!-- .container -->
+
+<script src="_/js/jquery-3.4.1.min.js"></script>
+<!--<script src="_/js/popper-1.15.0.min.js"></script>-->
+<!--<script src="_/js/bootstrap-4.4.1.min.js"></script>-->
+<script>
+    jQuery.noConflict();
+    jQuery(document).ready(function($){
+        $('#searchType').change(function(){
+            const current = $(this).val();
+
+            if(current === "advSearch")
+            {
+                $("#advSearch").removeClass("hidden");
+                $("#genSearch").addClass("hidden");
+            }
+
+            if(current === "genSearch")
+            {
+                $("#genSearch").removeClass("hidden");
+                $("#advSearch").addClass("hidden");
+            }
+        });
+    });
+</script>
+</body>
+</html>
