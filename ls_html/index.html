@@ -77,14 +77,14 @@
                            id="advSearchPublishedYear" placeholder="单行输入">
                 </div>
                 <div class="row form-group">
-                    <div class="col-sm-5">
-                        <button type="submit" class="btn bg-white float-right" name="advSearchRefresh"
-                                id="advSearchRefresh">Refresh
-                        </button>
-                    </div>
                     <div class="col-sm-7">
                         <button type="submit" class="btn bg-white float-right" name="advSearchSubmit"
                                 id="advSearchSubmit">Search
+                        </button>
+                    </div>
+                    <div class="col-sm-5">
+                        <button type="button" class="btn bg-white float-right" name="advSearchRefresh"
+                                id="advSearchRefresh">Refresh
                         </button>
                     </div>
                 </div>
@@ -168,6 +168,7 @@
 <script>
     jQuery.noConflict();
     jQuery(document).ready(function($){
+        // show/hide searchForm elements on searchType select change general/advanced
         $('#searchType').change(function(){
             const current = $(this).val();
 
@@ -175,6 +176,8 @@
             {
                 $("#advSearch").removeClass("hidden");
                 $("#genSearch").addClass("hidden");
+                // empty general search input if there is any entry
+                $('#genSearchInput').val("");
             }
 
             if(current === "genSearch")
@@ -182,6 +185,13 @@
                 $("#genSearch").removeClass("hidden");
                 $("#advSearch").addClass("hidden");
             }
+        });
+
+        // advancedSearch refresh button will reset form inputs on click
+        // but leave advanced search selected
+        $('#advSearchRefresh').click(function(){
+            $("#searchForm")[0].reset();
+            $("#searchType option[value=advSearch]").attr("selected", "selected");
         });
     });
 </script>
