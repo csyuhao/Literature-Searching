@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'litsearch/_/css/styles.css' %}" rel="stylesheet" type="text/css" media="all">
+
+    <script src="{% static 'litsearch/_/js/jquery-3.4.1.min.js' %}"></script>
+</head>
+<body>
+<main class="container bg-light">
+    <header class="">
+        <nav class="navbar bg-primary mb-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">LOGO</a>
+                </li>
+            </ul>
+            <div class="text-light col-sm-11">
+                <h1 class="mb-0" style="text-align:center;">Literature Search Engine</h1>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</main><!-- .container -->
+</body>
+</html>

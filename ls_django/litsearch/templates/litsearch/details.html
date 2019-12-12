@@ -1,0 +1,42 @@
+{% extends "litsearch/base.html" %}
+
+{% block title %}Literature Search Engine{% endblock %}
+
+{% block content %}
+    <section class="container details">
+        <div class="container bg-white py-3">
+            <header class="row">
+                <div class="col-sm-3 col-md-2">
+                    <img src="" alt="">
+                </div>
+                <div class="col-sm-9 col-md-10">
+                    <h4>Title: {{ literature_item.title }}</h4>
+                    <h4>ID: {{ literature_item.literature_id }}</h4>
+                    <h4>Author: {{ literature_item.author }}</h4>
+                </div>
+            </header>
+            <div class="row">
+                <h2 class="col-12">Abstract</h2>
+                <div class="col-12">{{ literature_item.abstract }}</div>
+            </div>
+            <div class="row">
+                <h2 class="col-12">Journal-ref</h2>
+                <div class="col-12">{{ literature_item.journal_ref }}</div>
+            </div>
+        </div>
+    </section><!-- .details -->
+
+    <section class="container items">
+        <div class="container">
+            <div class="row"><h2 class="col-12 mb-0">Recommended</h2></div>
+            <div class="row bg-white border-info">
+                <div class="col-4 col-md-3"><a href="">Title</a></div>
+                <div class="col-4 col-md-2">ID: 680100003309</div>
+                <div class="col-4 col-md-2">Category</div>
+                <div class="col-4 col-md-2">report #</div>
+                <div class="col-4 col-md-2">Author</div>
+            </div>
+        </div>
+    </section><!-- .items -->
+
+{% endblock %}
